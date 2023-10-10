@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Dialect dla SQLite -->
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLiteDialect</property>
+
+        <!-- Ustawienie połączenia do bazy SQLite -->
+        <property name="hibernate.connection.driver_class">org.sqlite.JDBC</property>
+        <property name="hibernate.connection.url">jdbc:sqlite:moja_baza.db</property>
+
+        <!-- Wyłącz logowanie SQL (opcjonalnie) -->
+        <property name="hibernate.show_sql">false</property>
+
+        <!-- Inne ustawienia -->
+        <!-- ... -->
+
+        <!-- Mappowanie klas encji -->
+        <mapping class="com.webnxtb.DataBase.ConfigureForXtb" />
+    </session-factory>
+</hibernate-configuration>
